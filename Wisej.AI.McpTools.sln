@@ -5,6 +5,11 @@ VisualStudioVersion = 17.10.34607.79
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wisej.AI.McpTools", "Wisej.AI.McpTools\Wisej.AI.McpTools.csproj", "{3E02C462-3DBA-E64A-33AA-BCB194857B41}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wisej.AI.McpTools.Package", "Wisej.AI.McpTools.Package\Wisej.AI.McpTools.Package.csproj", "{2E94D7E6-F1A4-879D-08E5-08796D79B459}"
+	ProjectSection(ProjectDependencies) = postProject
+		{3E02C462-3DBA-E64A-33AA-BCB194857B41} = {3E02C462-3DBA-E64A-33AA-BCB194857B41}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +20,10 @@ Global
 		{3E02C462-3DBA-E64A-33AA-BCB194857B41}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3E02C462-3DBA-E64A-33AA-BCB194857B41}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3E02C462-3DBA-E64A-33AA-BCB194857B41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E94D7E6-F1A4-879D-08E5-08796D79B459}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E94D7E6-F1A4-879D-08E5-08796D79B459}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E94D7E6-F1A4-879D-08E5-08796D79B459}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E94D7E6-F1A4-879D-08E5-08796D79B459}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
