@@ -7,7 +7,7 @@
 	  <RootNamespace>$(MSBuildProjectName.Replace(" ", "_").Replace("-", "_"))</RootNamespace>
 	  <NoWarn>CA1416</NoWarn>
 	  <LangVersion>latest</LangVersion>
-	  <AssemblyName>Wisej.AI.CommonTools</AssemblyName>
+	  <AssemblyName>Wisej.AI.McpTools</AssemblyName>
 	  <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
 	  <SignAssembly>True</SignAssembly>
 	  <AssemblyOriginatorKeyFile>extension.snk</AssemblyOriginatorKeyFile>
