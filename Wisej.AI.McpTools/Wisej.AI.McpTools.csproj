@@ -1,0 +1,57 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+	  <TargetFrameworks>$(NetFxVersion);$(NetCoreVersion);$(NetCoreVersion)-windows;$(NetCoreVersion)-android;$(NetCoreVersion)-ios;$(NetCoreVersion)-maccatalyst;$(NetWindowsEmbeddedVersion)</TargetFrameworks>
+	  <PlatformTarget>AnyCPU</PlatformTarget>
+	  <EmbeddedResourceUseDependentUponConvention>true</EmbeddedResourceUseDependentUponConvention>
+	  <RootNamespace>$(MSBuildProjectName.Replace(" ", "_").Replace("-", "_"))</RootNamespace>
+	  <NoWarn>CA1416</NoWarn>
+	  <LangVersion>latest</LangVersion>
+	  <AssemblyName>Wisej.AI.CommonTools</AssemblyName>
+	  <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+	  <SignAssembly>True</SignAssembly>
+	  <AssemblyOriginatorKeyFile>extension.snk</AssemblyOriginatorKeyFile>
+	  <NoStandardLib>true</NoStandardLib>
+	  <GenerateDocumentationFile>True</GenerateDocumentationFile>
+  </PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Wisej-4" Version="4.0.*-*" NoWarn="NU1605" />
+		<PackageReference Include="Wisej-4-AI" Version="4.0.*-*" NoWarn="NU1605" />
+		<PackageReference Include="ModelContextProtocol.Core" Version="0.3.0-preview.3" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Compile Update="Adapters\SmartCalendarAdapter.cs">
+	    <SubType>Component</SubType>
+	  </Compile>
+	  <Compile Update="Adapters\SmartChartAdapter.cs">
+	    <SubType>Component</SubType>
+	  </Compile>
+	  <Compile Update="Adapters\SmartChartJS3Adapter.cs">
+	    <SubType>Component</SubType>
+	  </Compile>
+	  <Compile Update="Adapters\SmartChatBoxAdapter.cs">
+	    <SubType>Component</SubType>
+	  </Compile>
+	  <Compile Update="Adapters\SmartDataEntryAdapter.cs">
+	    <SubType>Component</SubType>
+	  </Compile>
+	  <Compile Update="Adapters\SmartDocumentAdapter.cs">
+	    <SubType>Component</SubType>
+	  </Compile>
+	  <Compile Update="Adapters\SmartFullCalendarAdapter.cs">
+	    <SubType>Component</SubType>
+	  </Compile>
+	  <Compile Update="Adapters\SmartObjectAdapter.cs">
+	    <SubType>Component</SubType>
+	  </Compile>
+	  <Compile Update="Adapters\SmartReportAdapter.cs">
+	    <SubType>Component</SubType>
+	  </Compile>
+	  <Compile Update="SmartCopilotAdapter.cs">
+	    <SubType>Component</SubType>
+	  </Compile>
+	</ItemGroup>
+
+</Project>

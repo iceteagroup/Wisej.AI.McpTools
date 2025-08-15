@@ -1,1 +1,1 @@
-# Wisej.AI.McpTools
+# Wisej.AI.CommonTools
