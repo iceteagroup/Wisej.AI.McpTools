@@ -14,22 +14,22 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Wisej-4" Version="4.0.*-*" NoWarn="NU1605" />
-		<PackageReference Include="Wisej-4-AI" Version="4.0.*-*" NoWarn="NU1605" />
+		<PackageReference Include="Wisej-4" Version="4.0.*" NoWarn="NU1605" />
+		<PackageReference Include="Wisej-4-AI" Version="4.0.*" NoWarn="NU1605" />
 		<PackageReference Include="ModelContextProtocol.Core" Version="0.3.0-preview.3" />
 	</ItemGroup>
 
 	<ItemGroup>
 		<!-- EULA -->
-		<None Include="$(SolutionDir)\EULA-3.2.txt" Pack="true" PackagePath="" />
+		<None Include="EULA-3.2.txt" Pack="true" PackagePath="" />
 
 		<!-- Wisej.AI.McpTools -->
-		<None Include="$(SolutionDir)\Wisej.AI.McpTools\bin\$(Configuration)\$(NetFxVersion)\Wisej.AI.McpTools.dll" Pack="true" PackagePath="lib\$(NetFxVersion)" />
-		<None Include="$(SolutionDir)\Wisej.AI.McpTools\bin\$(Configuration)\$(NetCoreVersion)\Wisej.AI.McpTools.dll" Pack="true" PackagePath="lib\$(NetCoreVersion)" />
-		<None Include="$(SolutionDir)\Wisej.AI.McpTools\bin\$(Configuration)\$(NetCoreVersion)-ios\Wisej.AI.McpTools.dll" Pack="true" PackagePath="lib\$(NetCoreVersion)-ios14.2" />
-		<None Include="$(SolutionDir)\Wisej.AI.McpTools\bin\$(Configuration)\$(NetCoreVersion)-android\Wisej.AI.McpTools.dll" Pack="true" PackagePath="lib\$(NetCoreVersion)-android21.0" />
-		<None Include="$(SolutionDir)\Wisej.AI.McpTools\bin\$(Configuration)\$(NetCoreVersion)-maccatalyst\Wisej.AI.McpTools.dll" Pack="true" PackagePath="lib\$(NetCoreVersion)-maccatalyst14.0" />
-		<None Include="$(SolutionDir)\Wisej.AI.McpTools\bin\$(Configuration)\$(NetWindowsEmbeddedVersion)\Wisej.AI.McpTools.dll" Pack="true" PackagePath="lib\$(NetWindowsEmbeddedVersion)" />
+		<None Include="$(ProjectDir)..\Wisej.AI.McpTools\bin\$(Configuration)\$(NetFxVersion)\Wisej.AI.McpTools.dll" Pack="true" PackagePath="lib\$(NetFxVersion)" />
+		<None Include="$(ProjectDir)..\Wisej.AI.McpTools\bin\$(Configuration)\$(NetCoreVersion)\Wisej.AI.McpTools.dll" Pack="true" PackagePath="lib\$(NetCoreVersion)" />
+		<None Include="$(ProjectDir)..\Wisej.AI.McpTools\bin\$(Configuration)\$(NetCoreVersion)-ios\Wisej.AI.McpTools.dll" Pack="true" PackagePath="lib\$(NetCoreVersion)-ios14.2" />
+		<None Include="$(ProjectDir)..\Wisej.AI.McpTools\bin\$(Configuration)\$(NetCoreVersion)-android\Wisej.AI.McpTools.dll" Pack="true" PackagePath="lib\$(NetCoreVersion)-android21.0" />
+		<None Include="$(ProjectDir)..\Wisej.AI.McpTools\bin\$(Configuration)\$(NetCoreVersion)-maccatalyst\Wisej.AI.McpTools.dll" Pack="true" PackagePath="lib\$(NetCoreVersion)-maccatalyst14.0" />
+		<None Include="$(ProjectDir)..\Wisej.AI.McpTools\bin\$(Configuration)\$(NetWindowsEmbeddedVersion)\Wisej.AI.McpTools.dll" Pack="true" PackagePath="lib\$(NetWindowsEmbeddedVersion)" />
 
 	</ItemGroup>
 
