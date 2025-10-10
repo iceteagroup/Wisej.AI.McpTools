@@ -16,7 +16,7 @@
 	<ItemGroup>
 		<PackageReference Include="Wisej-4" Version="4.0.*" NoWarn="NU1605" />
 		<PackageReference Include="Wisej-4-AI" Version="4.0.*" NoWarn="NU1605" />
-		<PackageReference Include="ModelContextProtocol.Core" Version="0.3.0-preview.3" />
+		<PackageReference Include="ModelContextProtocol.Core" Version="0.4.0-preview.2" />
 	</ItemGroup>
 
 	<ItemGroup>
