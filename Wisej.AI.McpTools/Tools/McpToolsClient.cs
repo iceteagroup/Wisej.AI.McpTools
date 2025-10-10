@@ -80,7 +80,7 @@ namespace Wisej.AI
 			: this(
 				name,
 				description,
-				new SseClientTransport(new SseClientTransportOptions
+				new HttpClientTransport(new HttpClientTransportOptions
 				{
 					Endpoint = uri
 				}))
@@ -110,7 +110,7 @@ namespace Wisej.AI
 			if (clientTransport == null)
 				throw new ArgumentNullException(nameof(clientTransport));
 
-			var client = McpClientFactory.CreateAsync(clientTransport).Result;
+			var client = McpClient.CreateAsync(clientTransport).Result;
 			var tools = client.ListToolsAsync().Result;
 			ImportTools(name, description, tools);
 		}
