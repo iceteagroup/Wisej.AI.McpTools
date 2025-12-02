@@ -78,8 +78,8 @@ namespace Wisej.AI
 							DefaultValue = GetDefaultValue(param),
 							ParameterType = GetParameterType(param),
 							Required = requiredParameterNames.Contains(param.Name),
-							TypeName = param.Value.TryGetProperty("type", out JsonElement type) ? type.GetString() : null,
-							Description = param.Value.TryGetProperty("description", out JsonElement description) ? description.GetString() : null,
+							TypeName = param.Value.TryGetProperty("type", out JsonElement type) ? type.GetString() : "string",
+							Description = param.Value.TryGetProperty("description", out JsonElement description) ? description.GetString() : "",
 						});
 				}
 			}
