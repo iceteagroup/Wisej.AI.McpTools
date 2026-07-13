@@ -44,7 +44,16 @@ namespace Wisej.AI
 		/// </summary>
 		/// <param name="url">The URL of the MCP service endpoint.</param>
 		public McpToolsClient(string url)
-			: this("", "", new Uri(url))
+			: this("", "", new Uri(url), null)
+		{ }
+
+		/// <summary>
+		/// Initializes a new instance of the <see cref="McpToolsClient"/> class using the specified service URL and additional headers.
+		/// </summary>
+		/// <param name="url">The URL of the MCP service endpoint.</param>
+		/// <param name="headers">Optional additional headers to include with every request.</param>
+		public McpToolsClient(string url, IDictionary<string, string> headers)
+			: this("", "", new Uri(url), headers)
 		{ }
 
 		/// <summary>
@@ -55,10 +64,18 @@ namespace Wisej.AI
 		/// <param name="url">The URL of the MCP service endpoint.</param>
 
 		public McpToolsClient(string name, string description, string url)
-			: this(
-				name,
-				description,
-				new Uri(url))
+			: this(name, description, new Uri(url), null)
+		{ }
+
+		/// <summary>
+		/// Initializes a new instance of the <see cref="McpToolsClient"/> class with a name, description, service URL, and additional headers.
+		/// </summary>
+		/// <param name="name">The namespace or logical name for the tools.</param>
+		/// <param name="description">A description for the tool namespace.</param>
+		/// <param name="url">The URL of the MCP service endpoint.</param>
+		/// <param name="headers">Optional additional headers to include with every request.</param>
+		public McpToolsClient(string name, string description, string url, IDictionary<string, string> headers)
+			: this(name, description, new Uri(url), headers)
 		{ }
 
 		/// <summary>
@@ -67,7 +84,16 @@ namespace Wisej.AI
 		/// <param name="uri">The URI of the MCP service endpoint.</param>
 
 		public McpToolsClient(Uri uri)
-			: this("", "", uri)
+			: this("", "", uri, null)
+		{ }
+
+		/// <summary>
+		/// Initializes a new instance of the <see cref="McpToolsClient"/> class using the specified service URI and additional headers.
+		/// </summary>
+		/// <param name="uri">The URI of the MCP service endpoint.</param>
+		/// <param name="headers">Optional additional headers to include with every request.</param>
+		public McpToolsClient(Uri uri, IDictionary<string, string> headers)
+			: this("", "", uri, headers)
 		{ }
 
 		/// <summary>
@@ -77,12 +103,24 @@ namespace Wisej.AI
 		/// <param name="description">A description for the tool namespace.</param>
 		/// <param name="uri">The URI of the MCP service endpoint.</param>
 		public McpToolsClient(string name, string description, Uri uri)
+			: this(name, description, uri, null)
+		{ }
+
+		/// <summary>
+		/// Initializes a new instance of the <see cref="McpToolsClient"/> class with a name, description, service URI, and additional headers.
+		/// </summary>
+		/// <param name="name">The namespace or logical name for the tools.</param>
+		/// <param name="description">A description for the tool namespace.</param>
+		/// <param name="uri">The URI of the MCP service endpoint.</param>
+		/// <param name="headers">Optional additional headers to include with every request.</param>
+		public McpToolsClient(string name, string description, Uri uri, IDictionary<string, string> headers)
 			: this(
 				name,
 				description,
 				new HttpClientTransport(new HttpClientTransportOptions
 				{
-					Endpoint = uri
+					Endpoint = uri,
+					AdditionalHeaders = headers
 				}))
 		{ }
 
